@@ -3,6 +3,7 @@ package br.com.andrelessa.fullstack_project_backend.domain;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.andrelessa.fullstack_project_backend.enums.Perfil;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 
@@ -15,10 +16,12 @@ public class Cliente extends Pessoa {
 
     public Cliente() {
         super();
+        addPerfil(Perfil.CLIENTE);
     }
 
     public Cliente(Integer id, String nome, String cpf, String email, String senha) {
         super(id, nome, cpf, email, senha);
+        addPerfil(Perfil.CLIENTE);
         
     }
 
