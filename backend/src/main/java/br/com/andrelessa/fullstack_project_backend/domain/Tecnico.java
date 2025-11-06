@@ -6,6 +6,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import br.com.andrelessa.fullstack_project_backend.DTOs.TecnicoDTO;
 import br.com.andrelessa.fullstack_project_backend.enums.Perfil;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
@@ -19,7 +20,7 @@ public class Tecnico extends Pessoa {
     @OneToMany(mappedBy="tecnico")
     private List<Chamado> chamados = new ArrayList<>();
 
-    public Tecnico() {
+    public Tecnico(TecnicoDTO objDTO) {
         super();
         addPerfil(Perfil.CLIENTE);
     }

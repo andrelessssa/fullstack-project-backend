@@ -32,4 +32,9 @@ public record TecnicoDTO(
             obj.getDataCriacao()
         );
     }
+
+    public void setId(Object object) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setId'");
+    }
 }
