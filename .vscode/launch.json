@@ -1,5 +1,17 @@
 {
   "configurations": [
-  
+    {
+      "type": "java",
+      "name": "FullstackProjectBackendApplication",
+      "request": "launch",
+      "mainClass": "br.com.andrelessa.fullstack_project_backend.FullstackProjectBackendApplication",
+      "projectName": "fullstack-project-backend"
+    },
+    {
+      "command": "npm start",
+      "name": "Run npm start",
+      "request": "launch",
+      "type": "node-terminal"
+    }
   ]
 }
