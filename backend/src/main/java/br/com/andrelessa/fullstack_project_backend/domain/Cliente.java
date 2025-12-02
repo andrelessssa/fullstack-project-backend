@@ -6,10 +6,12 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import br.com.andrelessa.fullstack_project_backend.enums.Perfil;
+import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 
 @Entity
+@DiscriminatorValue("CLIENTE")
 public class Cliente extends Pessoa {
     private static final long serialVersionUID = 1L;
 

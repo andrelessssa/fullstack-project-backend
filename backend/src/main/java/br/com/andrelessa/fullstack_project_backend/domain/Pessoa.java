@@ -12,14 +12,21 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import br.com.andrelessa.fullstack_project_backend.enums.Perfil;
 import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
+import jakarta.persistence.DiscriminatorColumn;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Inheritance;
+import jakarta.persistence.InheritanceType;
+
+
 
 @Entity
+@Inheritance(strategy = InheritanceType.JOINED)
+@DiscriminatorColumn(name = "dtype", length = 31)
 public abstract class Pessoa implements Serializable {
     private static final long serialVersionUID = 1L;
     

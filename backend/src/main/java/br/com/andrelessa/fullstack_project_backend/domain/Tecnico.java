@@ -11,10 +11,12 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import br.com.andrelessa.fullstack_project_backend.DTOs.TecnicoDTO;
 import br.com.andrelessa.fullstack_project_backend.enums.Perfil;
+import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 
 @Entity
+@DiscriminatorValue("TECNICO")
 public class Tecnico extends Pessoa {
     private static final long serialVersionUID = 1L;
 
